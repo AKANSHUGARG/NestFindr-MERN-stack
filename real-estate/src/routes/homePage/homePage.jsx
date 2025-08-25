@@ -1,4 +1,4 @@
-import SearchBar from '../searchBar/searchBar'
+import SearchBar from '../../components/searchBar/searchBar'
 import './homePage.scss'
 
 function HomePage(){
@@ -10,7 +10,7 @@ function HomePage(){
                         Solution For RealEstate's Trade , Find and Get Dream Place
                     </h1>
                     <p>lfnjiefn enfefifn dnfieffn nefiren eifnreivn fdfnvdfvreg erg trgr  ger gerg  gfer gfergf  fvgre  g  fjh tgdf rth rfb dfg rh rfef grtrfgvrhgrgr brtgrgr tg rgr grrgregreg  ggrnfn iin inin niini ytv tv yby rrgfefe</p>
-                    <SearchBar/>
+                    <SearchBar />
                     <div className="boxes">
                         <div className="box">
                             <h1>16+</h1>
