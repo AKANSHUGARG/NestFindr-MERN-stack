@@ -2,58 +2,68 @@
 
 .profilePage {
   display: flex;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden; 
 
-  @include md{
+  @include md {
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
   }
 
   .details {
     flex: 3;
-    overflow-y: scroll;
+    overflow-y: auto; 
     padding-bottom: 50px;
 
-    @include md{
-      flex:none;
+    @include md {
+      flex: none;
       height: max-content;
+      overflow-y: visible;
     }
 
-    .wrapper{
+    .wrapper {
       padding-right: 50px;
       display: flex;
       flex-direction: column;
       gap: 50px;
 
-      .title{
+      @include md {
+        padding-right: 20px; 
+      }
+
+      .title {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        h1{
+        h1 {
           font-weight: 300;
         }
 
-        button{
+        button {
           padding: 12px 24px;
           background-color: #fece51;
           cursor: pointer;
           border: none;
+
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
 
-      .info{
+      .info {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
-        span{
+        span {
           display: flex;
           align-items: center;
           gap: 20px;
         }
 
-        img{
+        img {
           width: 40px;
           height: 40px;
           border-radius: 50%;
@@ -62,19 +72,29 @@
       }
     }
   }
+
   .chatContainer {
     flex: 2;
     background-color: #fcf5f3;
     height: 100%;
+    overflow-y: auto; 
+    border-left: 1px solid #eee;
 
-    @include md{
-      flex:none;
-      height: max-content;
+    @include md {
+      flex: none;
+      height: 50vh;
+      border-left: none;
+      border-top: 1px solid #eee;
     }
 
-    .wrapper{
-      padding: 0px 20px;
+    .wrapper {
+      padding: 20px;
       height: 100%;
+      box-sizing: border-box;
+
+      @include md {
+        padding: 10px;
+      }
     }
   }
 }
